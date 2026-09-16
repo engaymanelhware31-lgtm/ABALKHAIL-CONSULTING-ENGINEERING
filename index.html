@@ -23,7 +23,7 @@ header{position:fixed;top:0;left:0;right:0;z-index:20;background:rgba(255,255,25
 .brand{display:flex;align-items:center;gap:13px;font-weight:800;color:var(--navy)}
 .brand img{width:75px;height:55px;object-fit:contain}
 .navlinks{display:flex;gap:24px;font-size:14px;font-weight:600}
-.navlinks a{transition:.2s}
+.navlinks a{transition:.2s}.navlinks.mobile{display:flex}
 .navlinks a:hover{color:var(--gold)}
 .menu{display:none;border:0;background:none;font-size:28px;color:var(--navy)}
 .hero{min-height:100vh;padding-top:82px;display:grid;grid-template-columns:1.02fr .98fr;align-items:center;background:linear-gradient(120deg,#faf8f3,#eef2f7)}
@@ -77,7 +77,7 @@ footer{background:#0e1730;color:#b8c1d4;text-align:center;padding:22px;font-size
 .lightbox img{max-width:95vw;max-height:90vh;object-fit:contain}
 .close{position:absolute;top:18px;left:25px;color:#fff;font-size:36px;cursor:pointer}
 @media(max-width:850px){
- .navlinks{display:none}.menu{display:block}.hero{grid-template-columns:1fr}.hero-copy{padding:55px 0 25px}.hero-art{height:420px}.badge{right:12px}
+ .navlinks{display:none;position:absolute;top:82px;right:4%;left:4%;background:#fff;padding:16px;flex-direction:column;gap:8px;box-shadow:0 10px 25px rgba(0,0,0,.12);border-radius:10px}.menu{display:block}.hero{grid-template-columns:1fr}.hero-copy{padding:55px 0 25px}.hero-art{height:420px}.badge{right:12px}
  .about-grid,.contact-grid{grid-template-columns:1fr}.services{grid-template-columns:1fr 1fr}.gallery{grid-template-columns:1fr 1fr}.project:nth-child(1){grid-column:span 2}
 }
 @media(max-width:560px){
@@ -91,7 +91,7 @@ footer{background:#0e1730;color:#b8c1d4;text-align:center;padding:22px;font-size
 <header>
  <div class="container nav">
   <a class="brand" href="#home">
-   <img src="assets/logo.jpg" alt="شعار مكتب شيخة أبا الخيل">
+   <img src="logo.jpg" alt="شعار مكتب شيخة أبا الخيل">
    <span>مكتب شيخة أبا الخيل<br>للاستشارات الهندسية</span>
   </a>
   <nav class="navlinks">
@@ -113,7 +113,7 @@ footer{background:#0e1730;color:#b8c1d4;text-align:center;padding:22px;font-size
   </div>
  </div>
  <div class="hero-art">
-  <img src="assets/project-2.png" alt="أحد مشاريع المكتب">
+  <img src="project-2.png" alt="أحد مشاريع المكتب">
   <div class="badge">تصميم هندسي • جودة • تفاصيل</div>
  </div>
 </section>
@@ -153,11 +153,11 @@ footer{background:#0e1730;color:#b8c1d4;text-align:center;padding:22px;font-size
  <div class="container">
   <div class="section-head"><div class="kicker">أعمالنا</div><h2>نماذج من مشاريعنا</h2><p>مجموعة من التصاميم المعمارية المرفقة من أعمال المكتب.</p></div>
   <div class="gallery">
-   <a class="project" href="assets/project-1.png" data-lightbox="assets/project-1.png"><img src="assets/project-1.png" alt="مشروع معماري 1"><div class="project-caption">تصميم فيلا سكنية – نموذج 01</div></a>
-   <a class="project href="assets/project-2.png" data-lightbox="assets/project-2.png"><img src="assets/project-2.png" alt="مشروع معماري 2"><div class="project-caption">تصميم فيلا سكنية – نموذج 02</div></a>
-   <a class="project href="assets/project-3.png" data-lightbox="assets/project-3.png"><img src="assets/project-3.png" alt="مشروع معماري 3"><div class="project-caption">تصميم فيلا سكنية – نموذج 03</div></a>
-   <a class="project href="assets/project-4.png" data-lightbox="assets/project-4.png"><img src="assets/project-4.png" alt="مشروع معماري 4"><div class="project-caption">تصميم معماري حديث – نموذج 04</div></a>
-   <a class="project href="assets/project-5.png" data-lightbox="assets/project-5.png"><img src="assets/project-5.png" alt="مشروع معماري 5"><div class="project-caption">تصميم معماري حديث – نموذج 05</div></a>
+   <a class="project" href="project-1.png" data-lightbox="project-1.png"><img src="project-1.png" alt="مشروع معماري 1"><div class="project-caption">تصميم فيلا سكنية – نموذج 01</div></a>
+   <a class="project" href="project-2.png" data-lightbox="project-2.png"><img src="project-2.png" alt="مشروع معماري 2"><div class="project-caption">تصميم فيلا سكنية – نموذج 02</div></a>
+   <a class="project" href="project-3.png" data-lightbox="project-3.png"><img src="project-3.png" alt="مشروع معماري 3"><div class="project-caption">تصميم فيلا سكنية – نموذج 03</div></a>
+   <a class="project" href="project-4.png" data-lightbox="project-4.png"><img src="project-4.png" alt="مشروع معماري 4"><div class="project-caption">تصميم معماري حديث – نموذج 04</div></a>
+   <a class="project" href="project-5.png" data-lightbox="project-5.png"><img src="project-5.png" alt="مشروع معماري 5"><div class="project-caption">تصميم معماري حديث – نموذج 05</div></a>
   </div>
  </div>
 </section>
@@ -185,12 +185,116 @@ footer{background:#0e1730;color:#b8c1d4;text-align:center;padding:22px;font-size
 </section>
 </main>
 
-<footer>© 2026 مكتب شيخة أبا الخيل للاستشارات الهندسية — جميع الحقوق محفوظة</footer>
+<footer>
+ <div style="max-width:1160px;width:92%;margin:auto;display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap">
+  <div>© 2026 مكتب شيخة أبا الخيل للاستشارات الهندسية — جميع الحقوق محفوظة</div>
+  <a href="https://engaymanelhware31-lgtm.github.io/aymatech/" target="_blank" rel="noopener"
+     style="display:inline-flex;align-items:center;gap:8px;color:#fff;font-weight:700">
+    <span style="display:inline-grid;place-items:center;width:30px;height:30px;border-radius:8px;background:linear-gradient(135deg,#13c3ff,#086be0);font-family:Arial;font-weight:800">A</span>
+    <span>تصميم وتطوير AYMATECH Business Solutions</span>
+  </a>
+ </div>
+</footer>
 
+
+<!-- AYMATECH SETTINGS PANEL -->
+<div id="aymSettings" aria-hidden="true" style="display:none!important;position:fixed;inset:0;background:rgba(0,0,0,.72);z-index:200;overflow:auto;padding:25px">
+ <div style="max-width:820px;margin:25px auto;background:#fff;border-radius:16px;padding:28px;direction:rtl;font-family:Cairo,Tahoma,sans-serif">
+  <div style="display:flex;justify-content:space-between;align-items:center;gap:10px">
+   <div><h2 style="margin:0;color:#17254b">⚙️ إعدادات AYMATECH</h2><small style="color:#6b7280">إدارة بيانات الموقع محليًا من لوحة واحدة</small></div>
+   <button onclick="closeAymSettings()" style="border:0;background:none;font-size:30px;cursor:pointer">×</button>
+  </div>
+  <hr style="border:0;border-top:1px solid #eee;margin:20px 0">
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
+   <label>اسم المكتب<input id="sOffice"></label>
+   <label>الهاتف<input id="sPhone"></label>
+   <label>واتساب<input id="sWhatsApp"></label>
+   <label>البريد الإلكتروني<input id="sEmail" type="email"></label>
+   <label>Instagram<input id="sInstagram"></label>
+   <label>Google Maps<input id="sMaps"></label>
+   <label>العنوان<input id="sAddress"></label>
+   <label>ساعات العمل<input id="sHours"></label>
+   <label>رابط AYMATECH<input id="sAymatech"></label>
+   <label>اللون الرئيسي<input id="sPrimary" placeholder="#17254b"></label>
+   <label>لون التمييز<input id="sAccent" placeholder="#c7a66a"></label>
+   <label style="display:flex;align-items:center;gap:8px;margin-top:26px">إظهار زر واتساب <input id="sShowWhats" type="checkbox" style="width:auto"></label>
+  </div>
+  <div style="margin-top:18px">
+   <label>وصف المكتب<textarea id="sDescription" style="width:100%;min-height:90px"></textarea></label>
+  </div>
+  <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:20px">
+   <button onclick="saveAymSettings()" style="border:0;background:#17254b;color:#fff;padding:12px 22px;border-radius:8px;font:inherit;font-weight:700;cursor:pointer">حفظ الإعدادات</button>
+   <button onclick="resetAymSettings()" style="border:1px solid #17254b;background:#fff;color:#17254b;padding:12px 22px;border-radius:8px;font:inherit;font-weight:700;cursor:pointer">إعادة الافتراضي</button>
+   <button onclick="exportAymSettings()" style="border:1px solid #c7a66a;background:#fff;color:#8b6d31;padding:12px 22px;border-radius:8px;font:inherit;font-weight:700;cursor:pointer">تصدير الإعدادات</button>
+  </div>
+  <div id="aymStatus" style="margin-top:14px;color:#087fe8;font-weight:700"></div>
+  <p style="font-size:12px;color:#777;margin-top:12px">ملاحظة: هذه لوحة إعدادات Front-End وتخزن البيانات في متصفح الجهاز باستخدام LocalStorage. لا تُعد نظام إدارة مركزيًا أو حماية خادم.</p>
+ </div>
+</div>
 <div class="lightbox" id="lightbox" onclick="closeLightbox()">
  <span class="close">×</span><img id="lightboxImg" src="" alt="عرض المشروع" onclick="event.stopPropagation()">
 </div>
 
+
+<script>
+const AYM_DEFAULTS={
+ office:"مكتب شيخة أبا الخيل للاستشارات الهندسية",
+ phone:"+965 50107027",
+ whatsapp:"96550107027",
+ email:"",
+ instagram:"",
+ maps:"https://www.google.com/maps/search/?api=1&query=مكتب+شيخة+ابا+الخيل+للاستشارات+الهندسية+الكويت",
+ address:"الضجيج – الكويت",
+ hours:"10:30 ص – 7:00 م",
+ aymatech:"https://engaymanelhware31-lgtm.github.io/aymatech/",
+ primary:"#17254b",
+ accent:"#c7a66a",
+ showWhats:true,
+ description:"مكتب شيخة أبا الخيل للاستشارات الهندسية — حلول وتصاميم هندسية تجمع بين الجمال، العملية، ودقة التفاصيل."
+};
+function getAymSettings(){try{return {...AYM_DEFAULTS,...JSON.parse(localStorage.getItem("AYMATECH_SETTINGS")||"{}")}}catch(e){return {...AYM_DEFAULTS}}}
+function fillAymSettings(){
+ const s=getAymSettings();
+ Object.keys(s).forEach(k=>{const el=document.getElementById("s"+k.charAt(0).toUpperCase()+k.slice(1));if(el){if(el.type==="checkbox")el.checked=!!s[k];else el.value=s[k]??"";}});
+}
+function openAymSettings(){
+  const panel=document.getElementById("aymSettings");
+  panel.style.setProperty("display","block","important");
+  panel.setAttribute("aria-hidden","false");
+  fillAymSettings();
+}
+function closeAymSettings(){
+  const panel=document.getElementById("aymSettings");
+  panel.style.setProperty("display","none","important");
+  panel.setAttribute("aria-hidden","true");
+}
+let aymAdminKeys=new Set();
+document.addEventListener("keydown",function(e){
+  // Hidden administrator shortcut: Ctrl + Alt + A
+  if(e.ctrlKey && e.altKey && (e.key==="a" || e.key==="A")){
+    e.preventDefault();
+    const code=prompt("AYMATECH Admin");
+    if(code==="AYMATECH"){
+      openAymSettings();
+    }
+  }
+});
+function saveAymSettings(){
+ const keys=["office","phone","whatsapp","email","instagram","maps","address","hours","aymatech","primary","accent","description"];
+ const s={};
+ keys.forEach(k=>{const el=document.getElementById("s"+k.charAt(0).toUpperCase()+k.slice(1));s[k]=el?el.value:""});
+ s.showWhats=document.getElementById("sShowWhats").checked;
+ localStorage.setItem("AYMATECH_SETTINGS",JSON.stringify(s));
+ document.documentElement.style.setProperty("--navy",s.primary||AYM_DEFAULTS.primary);
+ document.documentElement.style.setProperty("--gold",s.accent||AYM_DEFAULTS.accent);
+ document.getElementById("aymStatus").textContent="✓ تم حفظ إعدادات AYMATECH على هذا الجهاز";
+}
+function resetAymSettings(){localStorage.removeItem("AYMATECH_SETTINGS");fillAymSettings();document.getElementById("aymStatus").textContent="تمت إعادة الإعدادات الافتراضية"}
+function exportAymSettings(){
+ const blob=new Blob([JSON.stringify(getAymSettings(),null,2)],{type:"application/json"});
+ const a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download="aymatech-settings.json";a.click();URL.revokeObjectURL(a.href);
+}
+</script>
 <script>
 document.querySelectorAll('[data-lightbox]').forEach(function(link){
   link.addEventListener('click',function(e){
